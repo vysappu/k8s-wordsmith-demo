@@ -13,12 +13,12 @@ import (
 func main() {
 	rand.Seed(time.Now().UnixNano())
 
-	fwd := &forwarder{"words", 8080}
+	fwd := &forwarder{"words", 9090}
 	http.Handle("/words/", http.StripPrefix("/words", fwd))
 	http.Handle("/", http.FileServer(http.Dir("static")))
 
-	fmt.Println("Listening on port 80")
-	http.ListenAndServe(":80", nil)
+	fmt.Println("Listening on port 90")
+	http.ListenAndServe(":90", nil)
 }
 
 type forwarder struct {
