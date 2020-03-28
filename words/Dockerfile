@@ -19,7 +19,7 @@ RUN mvn verify
 FROM openjdk:8u171-jre-alpine
 
 ENTRYPOINT ["java", "-Xmx8m", "-Xms8m", "-jar", "/app/words.jar"]
-EXPOSE 8080
+EXPOSE 9090
 
 WORKDIR /app
 COPY --from=build /home/lab/target .
