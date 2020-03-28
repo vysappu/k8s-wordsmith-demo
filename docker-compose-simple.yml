@@ -4,11 +4,11 @@ services:
 
 
   words:
-    image: dockersamples/k8s-wordsmith-api
+    image: vysappu/middle
     deploy:
       replicas: 5
 
   web:
-    image: dockersamples/k8s-wordsmith-web
+    image: vysappu/front
     ports:
-     - "8080:80"
+     - "9090:90"
